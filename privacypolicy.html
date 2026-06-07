@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Habit Heist</title>
+  <style>
+    :root {
+      --accent:     #F5C842;
+      --gold:       #F5C842;
+      --electric:   #7B6FFF;
+      --danger:     #FF4D4D;
+      --text-primary:   #F2EAD0;
+      --text-secondary: #A89870;
+      --bg-top:     #0A0A0F;
+      --bg-mid:     #0D0D1A;
+      --bg-bot:     #0A0F1A;
+      --card-bg:    rgba(255, 255, 255, 0.05);
+      --card-bg-alt: rgba(245, 200, 66, 0.06);
+      --border:     rgba(245, 200, 66, 0.18);
+      --green:      #34D399;
+      --green-bg:   rgba(52, 211, 153, 0.10);
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --accent:     #C49A00;
+        --gold:       #C49A00;
+        --electric:   #5B50D6;
+        --text-primary:   #1A1508;
+        --text-secondary: #6B5B30;
+        --bg-top:     #FFFDF0;
+        --bg-mid:     #FFF8E0;
+        --bg-bot:     #F5F0FF;
+        --card-bg:    rgba(255, 255, 255, 0.80);
+        --card-bg-alt: rgba(245, 200, 66, 0.08);
+        --border:     rgba(196, 154, 0, 0.20);
+        --green:      #059669;
+        --green-bg:   rgba(5, 150, 105, 0.10);
+      }
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, "SF Pro Rounded", "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(135deg, var(--bg-top) 0%, var(--bg-mid) 50%, var(--bg-bot) 100%);
+      min-height: 100vh;
+      color: var(--text-primary);
+      line-height: 1.75;
+    }
+    /* ── Header ── */
+    header {
+      text-align: center;
+      padding: 56px 24px 40px;
+    }
+    .app-icon {
+      font-size: 58px;
+      display: block;
+      margin-bottom: 12px;
+      filter: drop-shadow(0 4px 14px rgba(245, 200, 66, 0.40));
+    }
+    header h1 {
+      font-size: clamp(26px, 5vw, 38px);
+      font-weight: 300;
+      letter-spacing: -0.5px;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+    /* ── Hero promise banner ── */
+    .promise-banner {
+      max-width: 680px;
+      margin: 0 auto 32px;
+      padding: 0 20px;
+    }
+    .promise-box {
+      background: var(--green-bg);
+      border: 1.5px solid var(--green);
+      border-radius: 20px;
+      padding: 22px 28px;
+      text-align: center;
+    }
+    .promise-box .icon { font-size: 28px; margin-bottom: 8px; display: block; }
+    .promise-box strong {
+      display: block;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--green);
+      margin-bottom: 6px;
+    }
+    .promise-box p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+    /* ── Main card ── */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
+    }
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 40px 44px;
+      box-shadow: 0 8px 40px rgba(245, 200, 66, 0.07);
+    }
+    @media (max-width: 600px) {
+      .card { padding: 28px 22px; }
+      .promise-box { padding: 18px 20px; }
+    }
+    /* ── Section headings ── */
+    h2 {
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--gold);
+      margin-top: 40px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    h2:first-of-type { margin-top: 0; }
+    p {
+      font-size: 15px;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+    /* ── Data rows ── */
+    .data-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 18px;
+      background: var(--card-bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      margin-bottom: 10px;
+    }
+    .data-row .row-icon {
+      font-size: 22px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .data-row .row-body { flex: 1; }
+    .data-row .row-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 3px;
+    }
+    .data-row .row-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+    /* ── Badge ── */
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 50px;
+      margin-left: 8px;
+      vertical-align: middle;
+      letter-spacing: 0.3px;
+    }
+    .badge-green  { background: var(--green-bg); color: var(--green); border: 1px solid var(--green); }
+    .badge-gold   { background: rgba(245, 200, 66, 0.12); color: var(--gold); border: 1px solid var(--gold); }
+    .badge-purple { background: rgba(123, 111, 255, 0.15); color: var(--electric); border: 1px solid var(--electric); }
+    /* ── Simple list ── */
+    ul.plain {
+      list-style: none;
+      margin: 10px 0 14px;
+      padding: 0;
+    }
+    ul.plain li {
+      position: relative;
+      padding: 9px 14px 9px 36px;
+      font-size: 15px;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+      background: var(--card-bg-alt);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    ul.plain li::before {
+      content: "✦";
+      position: absolute;
+      left: 13px;
+      top: 10px;
+      font-size: 10px;
+      color: var(--gold);
+    }
+    a {
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    a:hover { border-bottom-color: var(--gold); }
+    /* ── Contact pill ── */
+    .contact-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+      padding: 13px 26px;
+      background: linear-gradient(90deg, var(--gold), var(--electric));
+      color: #0A0A0F;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 18px rgba(245, 200, 66, 0.30);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .contact-pill:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 24px rgba(245, 200, 66, 0.45);
+      border-bottom: none;
+    }
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="app-icon">🗡️</span>
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">Habit Heist &nbsp;·&nbsp; Last updated: June 7, 2025</p>
+  </header>
+
+  <!-- Hero promise -->
+  <div class="promise-banner">
+    <div class="promise-box">
+      <span class="icon">🔒</span>
+      <strong>Your data never leaves your device.</strong>
+      <p>Your habits, streaks, loot, and health data stay on your iPhone. We — the developers — never see, store, or touch any of it. Ever.</p>
+    </div>
+  </div>
+
+  <main>
+    <div class="card">
+
+      <h2>What Data the App Uses</h2>
+      <p>Habit Heist only touches data that is necessary for the game to work. Here is exactly where each piece lives:</p>
+
+      <div class="data-row">
+        <span class="row-icon">🏃</span>
+        <div class="row-body">
+          <div class="row-title">Apple Health data <span class="badge badge-green">On-device only</span></div>
+          <div class="row-desc">Habit Heist reads your step count, active calories, sleep analysis, and exercise minutes from Apple Health — only to calculate whether your daily habits are complete. This data is never sent anywhere. We read it; we never write to it.</div>
+        </div>
+      </div>
+
+      <div class="data-row">
+        <span class="row-icon">🎮</span>
+        <div class="row-body">
+          <div class="row-title">Game progress &amp; habit data <span class="badge badge-green">On-device only</span></div>
+          <div class="row-desc">Your habits, streaks, loot vault, gold, XP, and player level are stored locally using Apple's SwiftData framework. This data never leaves your device unless you have iCloud enabled, in which case it syncs privately through your own iCloud account.</div>
+        </div>
+      </div>
+
+      <div class="data-row">
+        <span class="row-icon">📊</span>
+        <div class="row-body">
+          <div class="row-title">Usage analytics <span class="badge badge-green">On-device only</span></div>
+          <div class="row-desc">The app logs anonymous in-game events (e.g. "habit completed", "room entered") to help us understand how the game is played. These events are stored only on your device and are never transmitted to any server.</div>
+        </div>
+      </div>
+
+      <div class="data-row">
+        <span class="row-icon">🏆</span>
+        <div class="row-body">
+          <div class="row-title">Game Center scores <span class="badge badge-purple">Via Apple</span></div>
+          <div class="row-desc">If you are signed in to Game Center, your leaderboard scores (longest streak, weekly gold) are submitted to Apple's Game Center service. This is governed by Apple's Privacy Policy. We receive no personal information from this — only the anonymous score submission.</div>
+        </div>
+      </div>
+
+      <div class="data-row">
+        <span class="row-icon">💳</span>
+        <div class="row-body">
+          <div class="row-title">Subscription purchases <span class="badge badge-purple">Via Apple</span></div>
+          <div class="row-desc">Purchases are processed entirely by Apple through the App Store. We receive only an anonymous confirmation that a valid subscription exists — never your name, email, or payment details.</div>
+        </div>
+      </div>
+
+      <div class="data-row">
+        <span class="row-icon">☁️</span>
+        <div class="row-body">
+          <div class="row-title">iCloud Sync <span class="badge badge-gold">Your iCloud, not ours</span></div>
+          <div class="row-desc">Plus subscribers can sync game progress across devices via their personal iCloud account. This is governed by Apple's Privacy Policy. We have zero access to your iCloud data.</div>
+        </div>
+      </div>
+
+      <h2>What We Do NOT Collect</h2>
+      <p>To be completely clear, Habit Heist does <strong>not</strong>:</p>
+      <ul class="plain">
+        <li>Collect your name, email address, or any contact information</li>
+        <li>Use any third-party analytics, advertising, or tracking SDKs</li>
+        <li>Send health data, habit data, or game data to any server</li>
+        <li>Share any information with third parties for any purpose</li>
+        <li>Use cookies or any web-based tracking</li>
+        <li>Access your location, contacts, camera, or microphone</li>
+        <li>Sell or monetise your data in any way</li>
+      </ul>
+
+      <h2>Apple Health — Special Note</h2>
+      <p>Access to Apple Health is entirely optional. If you decline Health permissions, all habits can still be completed manually by tapping them in the app. Health access is used only to auto-detect habit completion — it is never used for any other purpose and is never shared.</p>
+      <p>You can revoke Health access at any time: <strong>Settings → Privacy &amp; Security → Health → Habit Heist</strong>.</p>
+
+      <h2>iCloud &amp; Apple's Role</h2>
+      <p>The only data that ever leaves your device goes to your own personal iCloud account via Apple's infrastructure. This sync is optional and controlled entirely by you in your iOS Settings. Apple's handling of iCloud data is governed by <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple's Privacy Policy</a>.</p>
+
+      <h2>Children's Privacy</h2>
+      <p>Habit Heist does not knowingly collect any personal information from anyone, including children under 13. Since no personal data is collected or transmitted, the app is safe for all ages from a data privacy standpoint.</p>
+
+      <h2>Changes to This Policy</h2>
+      <p>If we ever add features that change how data is handled, we will update this page and note the change in the App Store release notes before it takes effect. The "Last updated" date at the top of this page will always reflect the most recent revision.</p>
+
+      <h2>Contact Us</h2>
+      <p>Have a question about privacy or anything else? We'd love to hear from you.</p>
+      <a class="contact-pill" href="mailto:hello@kpappworx.com">
+        ✉️ &nbsp;hello@kpappworx.com
+      </a>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Habit Heist &nbsp;·&nbsp; Karnataka, India</p>
+    <p style="margin-top: 6px;">Build your habits. Run your dungeon. 🗡️</p>
+  </footer>
+</body>
+</html>
